@@ -62,8 +62,8 @@ jobs:
           -backend-config="bucket=${{ inputs.bucket }}" \
           -backend-config="key=infra/${{ inputs.app }}/terraform.tfstate" \
           -backend-config="region=${{ inputs.region }}" \
-          -backend-config="assume_role={role_arn=arn:aws:iam::${{ inputs.aws-account }}:role/${{ inputs.role }}}"
-
+          -backend-config="assume_role={role_arn=\"arn:aws:iam::${{ inputs.aws-account }}:role/${{ inputs.role }}\"}"
+  
       - name: Terraform Workspace
         run: |
           if [ ${{ inputs.environment }} = prd ]; then 
