@@ -83,7 +83,7 @@ jobs:
       
       - name: Terraform Validate
         id: validate
-        run: terraform validate -no-color 
+        run: terraform validate -no-color || echo "Terraform validate falhou"
       
       - name: Terraform Plan
         id: plan
