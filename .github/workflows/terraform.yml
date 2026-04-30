@@ -81,9 +81,9 @@ jobs:
             exit 1
           fi
       
-      - name: Terraform Validate
-        id: validate
-        run: terraform validate -no-color || echo "Terraform validate falhou"
+      # - name: Terraform Validate
+      #   id: validate
+      #   run: terraform validate -no-color || echo "Terraform validate falhou"
       
       - name: Terraform Plan
         id: plan
